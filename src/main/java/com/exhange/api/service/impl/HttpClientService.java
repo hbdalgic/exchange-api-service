@@ -28,10 +28,6 @@ public class HttpClientService extends HttpClientConfig implements IHttpClient {
         this.objectMapper = objectMapper;
     }
 
-    public HttpClientService() {
-
-    }
-
     @Override
     public <T> T get(String url, String data, ProtocolEnum service, Class<T> clazz) throws ChannelException {
         String params = processedUrl(service, data);
